@@ -1,0 +1,29 @@
+.angle-wipe .border-container {
+	position: absolute;
+	width: 472px; /* sqrt(height^2 + width^2) */
+	height: 472px; /* sqrt(height^2 + width^2) */
+	box-sizing: border-box;
+	transform: rotate(45deg) translate3d(-576px, -53px, 0);
+	transition: transform 700ms;
+	overflow: hidden;
+}
+
+.angle-wipe .border-container::after {
+	display: block;
+	content: '';
+	border-width: 4px;
+	border-color: black;
+	border-style: solid;
+	width: 400px;
+	height: 250px;
+	transform: translate3d(504px, 107px, 0) rotate(-45deg);
+	transition: transform 700ms;
+}
+
+.angle-wipe.go .border-container {
+	transform: rotate(45deg) translate3d(-103px, -53px, 0);
+}
+
+.angle-wipe.go .border-container::after {
+	transform: translate3d(31px, 107px, 0) rotate(-45deg);
+}
