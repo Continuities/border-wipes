@@ -1,29 +1,22 @@
 .angle-wipe .border-container {
 	position: absolute;
-	width: 472px; /* sqrt(height^2 + width^2) */
-	height: 472px; /* sqrt(height^2 + width^2) */
-	box-sizing: border-box;
-	transform: rotate(45deg) translate3d(-576px, -53px, 0);
 	transition: transform 700ms;
 	overflow: hidden;
 }
 
-.angle-wipe .border-container::after {
-	display: block;
-	content: '';
+.angle-wipe .border {
+	position: absolute;
 	border-width: 4px;
 	border-color: black;
 	border-style: solid;
-	width: 400px;
-	height: 250px;
-	transform: translate3d(504px, 107px, 0) rotate(-45deg);
 	transition: transform 700ms;
+	box-sizing: border-box;
 }
 
 .angle-wipe.go .border-container {
-	transform: rotate(45deg) translate3d(-103px, -53px, 0);
+	transform: rotate(45deg) translate3d(0, 0, 0) !important;
 }
 
-.angle-wipe.go .border-container::after {
-	transform: translate3d(31px, 107px, 0) rotate(-45deg);
+.angle-wipe.go .border {
+	transform: translate3d(0, 0, 0) rotate(-45deg) !important;
 }
